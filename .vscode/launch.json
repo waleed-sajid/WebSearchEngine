@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "WebSearchEngine.Main",
+            "projectName": "WebSearchEngine_7a57a9b3"
+        },
+        {
+            "type": "java",
+            "name": "AutoCorrect1",
+            "request": "launch",
+            "mainClass": "WebSearchEngine.AutoCorrect1",
+            "projectName": "WebSearchEngine_7a57a9b3"
+        },
+        {
+            "type": "java",
+            "name": "EditDistance",
+            "request": "launch",
+            "mainClass": "WebSearchEngine.EditDistance",
+            "projectName": "WebSearchEngine_7a57a9b3"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Queue",
+            "request": "launch",
+            "mainClass": "Utilities.Queue",
+            "projectName": "WebSearchEngine_7a57a9b3"
+        },
+        {
+            "type": "java",
+            "name": "StdIn",
+            "request": "launch",
+            "mainClass": "Utilities.StdIn",
+            "projectName": "WebSearchEngine_7a57a9b3"
+        },
+        {
+            "type": "java",
+            "name": "StdOut",
+            "request": "launch",
+            "mainClass": "Utilities.StdOut",
+            "projectName": "WebSearchEngine_7a57a9b3"
+        },
+        {
+            "type": "java",
+            "name": "TST",
+            "request": "launch",
+            "mainClass": "Utilities.TST",
+            "projectName": "WebSearchEngine_7a57a9b3"
+        },
+        {
+            "type": "java",
+            "name": "AutoCorrect",
+            "request": "launch",
+            "mainClass": "WebSearchEngine.AutoCorrect",
+            "projectName": "WebSearchEngine_7a57a9b3"
+        },
+        {
+            "type": "java",
+            "name": "Driver",
+            "request": "launch",
+            "mainClass": "WebSearchEngine.Driver",
+            "projectName": "WebSearchEngine_7a57a9b3"
+        }
+    ]
+}
