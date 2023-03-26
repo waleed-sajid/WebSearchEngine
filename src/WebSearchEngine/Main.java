@@ -1,6 +1,7 @@
 package WebSearchEngine;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -34,8 +35,18 @@ public class Main {
 				Utilities.log(option);
 			}
 
-			Utilities.log("Please select one option:");
-			int option = input.nextInt();
+			int option = 0;
+			Utilities.log("Please select one option between 1 to 8:");
+			try {
+				option = input.nextInt();
+				if (option < 1 || option > 8) {
+					System.out.println("\nEntered Number is not in the options!!!\n");
+					return;
+				}
+			} catch (InputMismatchException e) {
+				System.out.println("\nThat was not a number!!!\n");
+				break;
+			}
 
 			switch (option) {
 
@@ -108,7 +119,6 @@ public class Main {
 					try {
 						File myObj = new File("history.txt");
 						Scanner myReader = new Scanner(myObj);
-						// int i=0;
 						while (myReader.hasNextLine()) {
 							String data = myReader.nextLine();
 							keys.add(data.toLowerCase());
