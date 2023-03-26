@@ -32,7 +32,7 @@ public class WebCrawler {
                 // abstract Uri
                 String link = ele.absUrl("href");
                 // check if Uri already visited
-                if (!urisVisited.contains(link)) {
+                if (!urisVisited.contains(link) && link != "") {
                     // crawling the Uri if not visited
                     checkCrawl(depth++, link, urisVisited, depthMax);
                 }
