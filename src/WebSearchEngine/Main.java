@@ -19,7 +19,7 @@ public class Main {
 		boolean state = true;
 		ArrayList<String> options = new ArrayList<String>() {
 			{
-				add("\n1. Search URL");
+				add("\n1. Crawl URL");
 				add("2. Remove Cache");
 				add("3. Search word");
 				add("4. Auto-correct word");
