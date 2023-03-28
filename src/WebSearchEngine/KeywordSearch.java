@@ -52,15 +52,12 @@ public class KeywordSearch {
 			System.out.println("Please enter the Keyword to be searched: ");
 			String word_searching = scan.nextLine(); // Read user input
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss a");
-			LocalDateTime now = LocalDateTime.now();
-			String history_word = word_searching + "\t" + dtf.format(now);
+			String history_word = word_searching + "\t" + dtf.format(LocalDateTime.now());
 
 			// Write to history
 			File file = new File("history.txt");
 			try {
 				BufferedWriter writer = new BufferedWriter(new FileWriter(file, true));
-				// Driver.keys[Driver.keys.length]=word_searching;
-				// Driver.history.put(word_searching, Driver.keys.length-1);
 				writer.append(history_word);
 				writer.newLine();
 				writer.flush();
@@ -95,7 +92,7 @@ public class KeywordSearch {
 		} while (operation_restart.equals("yes") || operation_restart.equals("Yes") || operation_restart.equals("YES"));
 
 		if (operation_restart.equals("no") || operation_restart.equals("No") || operation_restart.equals("NO"))
-			System.out.println("Thank you for using our program, I hope we get 100 marks!");
+			System.out.println("Thank you!");
 
 	}
 
@@ -142,11 +139,11 @@ public class KeywordSearch {
 
 			// File
 			String keyword = (String) keyword_list.get(i);
-			if (!map.get(keyword).toString().equals("0")) {
-				System.out.println(page_rank + ". " + " ||| number of word occurrence: " + map.get(keyword)
-						+ " ||| Uniform Resource Locator (URL) " + hash_mapping_1.get(keyword));
+			// if (!map.get(keyword).toString().equals("0")) {
+			System.out.println(page_rank + ". " + " ||| number of word occurrence: " + map.get(keyword)
+					+ " ||| Uniform Resource Locator (URL) " + hash_mapping_1.get(keyword));
 
-			}
+			// }
 
 			// Occurrence
 			page_rank++;

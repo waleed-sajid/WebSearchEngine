@@ -22,8 +22,8 @@ public class Main {
 				add("\n1. Crawl URL");
 				add("2. Remove Cache");
 				add("3. Search word");
-				add("4. Auto-correct word");
-				add("5. Auto-fill word");
+				add("4. Auto-fill word");
+				add("5. Auto-correct word");
 				add("6. Show history");
 				add("7. Delete history");
 				add("8. Exit");
@@ -97,15 +97,6 @@ public class Main {
 
 				case 4: {
 					Utilities.log("Selected option: " + options.get(option - 1));
-					System.out.println("\nAUTOCORRECT SIMULATION\n");
-					loadWords();
-					sort(words);
-					startSimulation();
-					break;
-				}
-
-				case 5: {
-					Utilities.log("Selected option: " + options.get(option - 1));
 
 					input.nextLine();
 					Utilities.log("Enter word for suggestions (We use history.txt for this feature)");
@@ -130,6 +121,15 @@ public class Main {
 						Utilities.log("Error: " + e.getMessage());
 					}
 					history.printSimilarWords(word.toLowerCase());
+					break;
+				}
+
+				case 5: {
+					Utilities.log("Selected option: " + options.get(option - 1));
+					System.out.println("\nAUTOCORRECT SIMULATION\n");
+					loadWords();
+					sort(words);
+					startSimulation();
 					break;
 				}
 
